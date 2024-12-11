@@ -179,6 +179,7 @@ function reStart() {
     score = 0;
     xVelo = uniteS;
     yVelo = 0;
+    lsp = true
     spd = 75;
     snake = [
         { x: uniteS * 4, y: 0 },
