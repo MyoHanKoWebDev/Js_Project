@@ -24,7 +24,7 @@ weatherForm.addEventListener('submit', async event => {
 async function getWeaData(city) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     const response = await fetch(apiUrl);
-    
+
     //testing for unormal city name
     if (!response.ok) {
         throw new Error("Could not fetch weather data");
@@ -51,8 +51,8 @@ function disWeaInfo(data) {
     card.append(tempDis);
 
     const humidDis = document.createElement("p");
-    humidDis.textContent = humidity;
-    humidDis.classList.add("desc")
+    humidDis.textContent =`Humidity : ${humidity}`;
+    humidDis.classList.add("humid")
     card.append(humidDis);
 
     const descDis = document.createElement("p");
